@@ -1,0 +1,14 @@
+/home/vlad/cache/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1
+/home/vlad/cache/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.deps.json
+/home/vlad/cache/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.runtimeconfig.json
+/home/vlad/cache/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.dll
+/home/vlad/cache/ConsoleApp1/bin/Debug/net8.0/ConsoleApp1.pdb
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.AssemblyInfoInputs.cache
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.AssemblyInfo.cs
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.dll
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/refint/ConsoleApp1.dll
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.pdb
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ConsoleApp1.genruntimeconfig.cache
+/home/vlad/cache/ConsoleApp1/obj/Debug/net8.0/ref/ConsoleApp1.dll
