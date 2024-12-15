@@ -10,10 +10,17 @@ public class LFU : Store
     {
         while (IsLimitOvercome())
         {
-            var leastUsed = _cache.OrderBy(x => x.Value.Usage).FirstOrDefault();
+            var orderedCache = _cache.OrderBy(x => x.Value.Usage);
+            var lastUsage = _cache.OrderByDescending(x => x.Value.LastUse).FirstOrDefault();
 
-            if (leastUsed.Value != null)
-                _cache.Remove(leastUsed.Key);
+            foreach (var item in orderedCache)
+            {
+                if (item.Key != lastUsage.Key)
+                {
+                    _cache.Remove(item.Key);
+                    break;
+                }
+            }
         }
     }
 }

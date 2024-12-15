@@ -1,4 +1,6 @@
 using System;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace ConsoleApp1;
@@ -62,15 +64,30 @@ abstract public class Store
         string header = $"Id | Size | Usage | LastUse";
         string[] headerParts = header.Split('|');
 
-        string cacheList = string.Join('\n', _cache.OrderBy(x => x.Key).Select(x =>
+        var orderedCache = _cache.OrderBy(x => x.Key);
+
+        var length = orderedCache.Count();
+
+        string cacheList = "";
+
+        for (int i = 0; i < length; i++)
         {
-            string[] parts = { x.Key.ToString(), x.Value.Size.ToString(), x.Value.Usage.ToString(), x.Value.LastUse.ToString() };
-            return string.Join("|", parts.Select((p, i) => p.PadRight(headerParts[i].Trim().Length)));
-        }));
+            var item = orderedCache.Where(x => x.Key == i).FirstOrDefault();
+
+            string[] parts = new string[4] { i.ToString(), "", "", "" };
+
+            if (item.Value != null)
+            {
+                parts[0] = item.Key.ToString();
+                parts[1] = item.Value.Size.ToString();
+                parts[2] = item.Value.Usage.ToString();
+                parts[3] = item.Value.LastUse.ToString();
+            }
+
+            cacheList += string.Join("|", parts.Select((p, i) => p.PadRight(headerParts[i].Trim().Length)));
+            cacheList += '\n';
+        }
 
         return stat + '\n' + header + '\n' + cacheList;
     }
-
-
-
 }
